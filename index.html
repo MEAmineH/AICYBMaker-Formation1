@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CISSP Certification Quest</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero" aria-labelledby="game-title">
+        <p class="eyebrow">Security certification practice</p>
+        <h1 id="game-title">CISSP Certification Quest</h1>
+        <p class="intro">
+          Train for CISSP-style thinking with scenario questions. Each round has one best
+          answer, one clearly incorrect distractor, and two close-but-not-best options.
+        </p>
+      </section>
+
+      <section class="card game-card" aria-live="polite">
+        <div class="hud">
+          <div>
+            <span class="label">Question</span>
+            <strong id="question-count">1 / 10</strong>
+          </div>
+          <div>
+            <span class="label">Score</span>
+            <strong id="score">0</strong>
+          </div>
+          <div>
+            <span class="label">Streak</span>
+            <strong id="streak">0</strong>
+          </div>
+        </div>
+
+        <div class="progress" aria-hidden="true">
+          <span id="progress-bar"></span>
+        </div>
+
+        <p id="domain" class="domain"></p>
+        <h2 id="question-text"></h2>
+        <div id="answers" class="answers"></div>
+
+        <aside id="feedback" class="feedback hidden"></aside>
+
+        <div class="actions">
+          <button id="next-button" class="primary" disabled>Next question</button>
+          <button id="restart-button" class="secondary">Restart</button>
+        </div>
+      </section>
+
+      <section id="results" class="card results hidden" aria-labelledby="results-title">
+        <h2 id="results-title">Mission complete</h2>
+        <p id="results-copy"></p>
+        <button id="play-again-button" class="primary">Play again</button>
+      </section>
+    </main>
+
+    <script src="game.js"></script>
+  </body>
+</html>
